@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cajero Automatico</title>
+    <link rel="stylesheet" href="style.css"> <!-- enlasado con la hoja de style.css-->
+    
+
+</head>
+<body>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br> 
+  <br> 
+  <p> 1= Quetzalez </p> <!-- opciones para la condición-->
+  <p> 2= Dolar</p>
+
+  <form action=""> <!--creacion de un formulario-->
+    <input id="myInput" type="text"> <br>  <br> <!--espacio donde ingresara la opción para realizar la condicion -->
+    <input type="button" value="seleccion" onclick="myFunction()" id="yacosa"></input> <!--boton para ingresar a la opción seleccionada-->
+     <br><br>
+    <input type="button" value="salir" id="ponete" onclick="window.location = 'PROYECTO (algoritmo).html';"> <!--boton para salir del sistema-->
+    <p id="demo"></p>
+  </form>
+  
+  <script>  //opción donde empieza la condicion
+    function myFunction() { 
+ 
+      var moneda = document.getElementById("myInput").value;
+    
+      switch(moneda) { //condicion para revisar la opción ingresada y realizar la condicion 
+        case "1":
+        window.location="principal1.html";
+        break;
+        case "2":
+        window.location="principal2.html";
+        break;
+    
+      }
+      document.getElementById("demo").innerHTML = text;
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cajero Automatico</title>
+    <link rel="stylesheet" href="style.css"> <!-- enlasado con la hoja de style.css-->
+</head>
+<body>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>  
+   <br>
+
+     <form action=""> <!--creacion de un formulario-->
+        <h1>CAJERO</h1> <br>
+        <label for="">Numero de Tarjeta</label> <!-- opción donde ingrese la tarjeta de credito (carnet) -->
+        <input type="text" name="u" id=""> <br> <br> <br>
+        <label form="">Numero de Pin</label>  <!-- opción donde ingrese el codigo (2021) -->
+        <input type="Numero de pin" name="c" id=""> <br> <br> <br>
+        <input type="button" value="Ingresar" id="boton" onclick="login(this.form)">
+    </form>
+      
+   <script> //creacion de una condicion (2021)
+    
+       function login(form){ //condicion para el codigo pin 
+                if (form.c.value=="2021") {   
+                    location="eleccion.html";
+                } else {
+                    alert("error de pin");
+                }
+           
+        }
+   </script>
+</body>
+</html>

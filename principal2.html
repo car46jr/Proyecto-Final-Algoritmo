@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cajero Automatico</title>
+    <link rel="stylesheet" href="style.css"> <!-- enlasado con la hoja de style.css-->
+
+</head>
+
+<body>
+  <form action="" method="post"> <!--creacion de un formulario en Dolares-->
+    <h1>La transaccion que realizaras es en la moneda de Dolares ($)</h1>
+    </br>
+    </br>
+    <br>
+    <h2>Su saldo actual es</h2></br>
+    <input type="text" name="verificar"> <!-- opción donde verificara el saldo actual del usuario -->
+    <button type="button"  id="boton" onclick="verificarSaldo()">Verificar</button>  <!-- para verifcar el saldo tiene que volver a apachar el boton (no es automatico)  -->
+    </br>
+    </br>
+    <br>
+    <input type="text" name="retirar">  <!-- opción donde ingresara la cantidad deseada a retirar -->
+    <button type="button" onclick="retirarDinero()">Retirar</button>  <!-- opción de boton donde debe apachar para retirar el dinero  -->
+<br><br>
+    <input type="button" value="Regresar" onclick="window.location = 'eleccion.html';">  <!-- opción donde podra regresar a la seleccíon de moneda -->
+    <br>
+    <br>
+    <input type="button"  value="Salir" onclick="window.location = 'PROYECTO (algoritmo).html';">  <!-- opción donde podra salirse del sistema -->
+  </form>
+  </form>
+  <script type="text/javascript">
+    var saldo = 1000;
+
+    function retirarDinero() { // condicion que revisa si el retiro es mayor que el saldo actual
+      var retiro = parseInt(document.getElementsByName("retirar")[0].value);
+      if (retiro > saldo) {
+        alert("Su fondo disposible no es suficiente");
+      } else {
+        saldo -= retiro;
+      }
+    }
+
+    function verificarSaldo() {   // condicion de verificacion del saldo actual 
+      document.getElementsByName("verificar")[0].value = saldo;
+    }
+
+   
+  </script>
+</body>
+
+</html>
